@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+</head>
+<body>
+    <p>Nome Aluno (a):
+        <input type="text" id="nomealuno">
+    </p>
+
+    <p>1º Nota
+        <input type="text" id="nota1">
+    </p>
+
+    <p>2º Nota
+        <input type="text" id="nota2">
+    </p>
+
+    <div>
+        <button id="BtaoAluno">Exibir média Aluno</button>
+        <button id="BtaoTurma">Exibir média da Turma</button>
+    </div>
+
+    <hr>
+
+    <p id="mediaFinal"></p>
+    <p id="Situacao"></p>
+    <p id="MediaTurma"></p>
+
+    <script>
+
+        BtaoAluno.addEventListener('click', function(){
+
+        const nomealuno = document.getElementById('nomealuno').value
+        const nota1 = document.getElementById('nota1').value
+        const nota2 = document.getElementById('nota2').value
+
+        const BtaoAluno = document.getElementById('BtaoAluno')
+        const BtaoTurma = document.getElementById('BtaoTurma')
+
+        
+        media= (nota1 + nota2) / 2
+
+        mediaFinal.innerHTML = `Média da nota ${media}`
+        
+            // if(media < 10 && media >=7){
+            //     // nome.innerHTML = `Parabéns ${nome}!! Você foi Aprovado`
+            //     console.log(`Parabéns ${nomealuno}!! Você foi Aprovado`)
+
+            // }else if(media < 7 && media >= 3){
+
+            //     // nome.innerHTML = `Atenção ${nome}, você esta de recuperação`
+            //     console.log(`Atenção ${nomealuno}, você esta de recuperação`)
+            // }else{
+            //     // nome.innerHTML = `Ops ${nome}, você foi reprovado`
+            //     console.log(`Ops ${nomealuno}, você foi reprovado`)
+            // }
+
+        })
+
+
+
+        BtaoTurma.addEventListener('click', ()=>{
+
+        })
+
+       
+
+    </script>
+</body>
+</html>

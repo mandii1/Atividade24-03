@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+    
+    <div style="background-color: burlywood;">
+        <input type="text" id="inObjetos">
+        <button id="adicionar" >Adicionar</button>
+        <button id="ordenar" >Ordenar</button>
+
+    </div>
+
+    <script>
+        let objetos = ['Cadeira', 'Inpressora', 'Garfo'];
+
+        const inObjetos = document.getElementById('inObjetos')
+        const adicionar = document.getElementById('adicionar')
+        const ordenar = document.getElementById('ordenar')
+        
+        // function adelementos(textAd){
+        
+        //     objetos.unshift()
+
+        //     console.log(objetos)
+        // }
+
+
+// parametro de evento que vai contecer no butão,  função anonima
+        
+        adicionar.addEventListener('click', function(){
+            let objeto = inObjetos.value
+            if(objeto === ''){ //campo vazio
+                alert('Informe um valor válido')
+            }else{
+                // quando coloca ele vai pesquisar o array
+                if(objetos.indexOf(objeto) != -1){
+                    alert('Objeto já existe no Array ')
+                }else{
+                    objetos.push(objeto) //adicionar o elemento no final da lista
+                    console.log(objetos) 
+                    inObjetos.value =  '' //para deixar o campo limpo
+                }
+
+            }
+        
+        })
+        ordenar.addEventListener('click', ()=>{
+            let ordenarObjetos = objetos.sort() //Deixar o Array em ordem alfabetica
+            console.log(ordenarObjetos)
+        })
+
+    </script>
+</body>
+</html>
